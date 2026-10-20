@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark"><link rel="icon" href="data:,"><title>ABHYAAS — ONL Trade Activation & GTM Intelligence · HTML Snapshot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--forest:#102820;--canvas:#F4F3E9;--card:#FFFFFF;--ink:#1F2933;--sage:#D9E8C8;--emerald:#477A55;--slate:#667085;--border:#E2E6E0;--success:#27845A;--amber:#D99A2B;--risk:#C94C4C;--hover:#EDECE0;--input:#fff;--shadow:0 1px 3px rgba(16,40,32,.08)}
+@media(prefers-color-scheme:dark){:root{--canvas:#101815;--card:#1B2922;--ink:#EDF2EC;--slate:#9AA8A0;--border:#2E4036;--hover:#243830;--input:#14211B;--shadow:0 1px 3px rgba(0,0,0,.4)}}
+[data-theme="dark"]{--canvas:#101815;--card:#1B2922;--ink:#EDF2EC;--slate:#9AA8A0;--border:#2E4036;--hover:#243830;--input:#14211B}
+[data-theme="light"]{--canvas:#F4F3E9;--card:#fff;--ink:#1F2933;--slate:#667085;--border:#E2E6E0;--hover:#EDECE0;--input:#fff}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--canvas);color:var(--ink);font-size:14px;line-height:1.5}
+.mono{font-family:"IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}button{font:inherit;cursor:pointer}input,select{font:inherit}
+.layout{display:flex;min-height:100vh}
+aside{width:248px;background:var(--forest);color:#D9E8C8;flex-shrink:0;display:flex;flex-direction:column;position:sticky;top:0;height:100vh;z-index:40;transition:width .2s}
+aside.collapsed{width:64px}aside.collapsed .lbl,aside.collapsed .word,aside.collapsed .grp{display:none}
+.brand{padding:18px 16px;border-bottom:1px solid rgba(217,232,200,.18)} .brand b{color:#fff;font-size:20px;letter-spacing:.06em}
+.brand small{display:block;color:#A9C29A;font-size:11px;margin-top:2px}
+nav{padding:10px 8px;overflow-y:auto;flex:1}
+.grp{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#8FA98A;padding:12px 8px 4px}
+.navbtn{display:flex;gap:10px;align-items:center;width:100%;text-align:left;background:none;border:0;color:#C9D8C0;padding:8px;border-radius:8px;font-size:13.5px}
+.navbtn:hover{background:rgba(255,255,255,.08);color:#fff}.navbtn.active{background:#D9E8C8;color:#102820;font-weight:600}
+main{flex:1;min-width:0}
+header.top{position:sticky;top:0;z-index:30;background:var(--canvas);border-bottom:1px solid var(--border);padding:10px 20px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+header.top h1{font-size:15px;margin:0}.crumb{color:var(--slate);font-size:12.5px}
+.btn{border:1px solid var(--border);background:var(--card);color:var(--ink);border-radius:8px;padding:7px 12px;font-weight:600;font-size:13px}
+.btn.primary{background:var(--forest);color:#fff;border-color:var(--forest)}[data-theme="dark"] .btn.primary{background:#D9E8C8;color:#102820;border-color:#D9E8C8}
+.pill{font-size:11px;font-weight:700;padding:3px 8px;border-radius:99px;background:var(--sage);color:#102820}
+.pill.amber{background:#F7E3B8;color:#6B4A08}.pill.grey{background:var(--hover);color:var(--slate)}
+.wrap{padding:20px;max-width:1280px;margin:0 auto}
+.page{display:none}.page.active{display:block}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:14px 0}
+.kpi{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px;box-shadow:var(--shadow);cursor:pointer;text-align:left;width:100%}
+.kpi .v{font-size:26px;font-weight:800;letter-spacing:-.02em}.kpi .l{font-size:12px;color:var(--slate);font-weight:600}.kpi .d{font-size:12px;margin-top:2px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;margin-bottom:14px;box-shadow:var(--shadow)}
+.card h2,.card h3{margin:0 0 8px}.card h2{font-size:17px}.card h3{font-size:14.5px}
+table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:8px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}th{font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--slate)}
+.num{text-align:right;font-variant-numeric:tabular-nums}
+.warn{border:1px solid #E8C87A;background:#FFF8E6;color:#5C4305;border-radius:10px;padding:12px 14px;margin-bottom:14px;font-size:13px}
+[data-theme="dark"] .warn{background:#3A2F12;color:#F2D98C;border-color:#6B5516}
+.bar{height:10px;background:var(--hover);border-radius:99px;overflow:hidden}.bar>i{display:block;height:100%;background:var(--emerald)}
+input[type=text],input[type=number],input[type=search],select{background:var(--input);color:var(--ink);border:1px solid var(--border);border-radius:8px;padding:8px 10px}
+input[type=range]{width:100%;accent-color:var(--emerald)}
+.drawer{position:fixed;top:0;right:0;width:min(440px,94vw);height:100vh;background:var(--card);border-left:1px solid var(--border);z-index:60;padding:20px;overflow-y:auto;transform:translateX(105%);transition:transform .22s;box-shadow:-8px 0 24px rgba(0,0,0,.15);visibility:hidden}
+.drawer.open{transform:none;visibility:visible}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:70;display:none;align-items:flex-start;justify-content:center;padding:60px 16px}.modal.open{display:flex}
+.modal .box{background:var(--card);border-radius:12px;max-width:560px;width:100%;padding:16px;max-height:70vh;overflow-y:auto}
+.tag{font-size:10.5px;font-weight:700;border:1px solid var(--border);border-radius:99px;padding:1px 7px;color:var(--slate)}
+.hamb{display:none}
+@media(max-width:900px){.kpis{grid-template-columns:1fr 1fr}.grid2,.grid3{grid-template-columns:1fr}aside{position:fixed;left:0;top:0;transform:translateX(-105%);width:248px!important;visibility:hidden}aside.open{transform:none;visibility:visible}aside .lbl,aside .word,aside .grp{display:block!important}.hamb{display:inline-block}.wrap{padding:14px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+:focus-visible{outline:2px solid var(--emerald);outline-offset:2px}
+footer{color:var(--slate);font-size:12px;padding:8px 20px 28px;max-width:1280px;margin:0 auto}
+svg text{fill:var(--ink);font-family:Inter,sans-serif}
+</style></head><body>
+<div class="layout">
+<aside id="sidebar" aria-label="Main navigation">
+<div class="brand"><b>ABHYAAS</b><span class="word"><small>ONL Trade Activation &amp; GTM Intelligence</small><small style="color:#fff">HTML Snapshot · Static export</small></span></div>
+<nav id="nav"></nav>
+<div style="padding:12px"><button class="btn" id="collapseBtn" style="width:100%">⇆ <span class="lbl">Collapse</span></button></div>
+</aside>
+<main>
+<header class="top">
+<button class="btn hamb" id="menuBtn" aria-label="Open menu">☰</button>
+<div><h1 id="pageTitle">Overview</h1><div class="crumb" id="crumb">ABHYAAS / Overview</div></div>
+<span class="pill">Source baseline · Sep 2026</span><span class="pill grey">Static snapshot — no live data</span>
+<span style="flex:1"></span>
+<input type="search" id="cmdSearch" placeholder="Search pages… ( / )" aria-label="Search pages" style="max-width:220px">
+<button class="btn" id="notifBtn">🔔 Alerts <span class="pill amber">3</span></button>
+<button class="btn" id="themeBtn">◐ Theme: System</button>
+<button class="btn" id="profileBtn">Profile ▾</button>
+</header>
+<div class="wrap">
+
+<!-- OVERVIEW -->
+<section class="page active" data-page="overview">
+<p style="margin:2px 0 0;color:var(--slate)"><b style="color:var(--ink)">From Ghost to Habit: Project Abhyaas</b> · Arthik Khayal ’26 · 12 weeks, ~26 Oct – 31 Dec 2026 · <i>“ONL Abhyaas — Seekho. Practice karo. Phir khud decide karo.”</i> · <i>Stop reminding. Start rehearsing.</i></p>
+<div class="kpis" id="kpis"></div>
+<div class="warn" role="note"><b>⚠ Validation flags — not reconciled:</b> (1) Cohort build ≈19,452 actives (~+240 bps) vs source scenario model B (25,100 → 17.21%) which does <b>not</b> reconcile — not a validated forecast. (2) T12 roll-off ~16,195 is an [ASSUMPTION], not derivable from T12−T3. (3) Brokerage ₹0.15/₹0.20 pricing anomaly — revenue/ROI unavailable until confirmed.</div>
+<div class="grid2">
+<div class="card"><h3>Baseline — only two dated points (no fabricated trend)</h3><div id="chartBaseline"></div><p style="color:var(--slate);font-size:12.5px">Sep 2025 → Sep 2026. Base +10.3% and actives +10.6%, rate only +4 bps — a breadth problem: the core deepened (T3 +22.6%) while the wider base did not.</p></div>
+<div class="card"><h3>Composition — Sep 2026</h3><div id="chartComp"></div><p style="font-size:13px">T12 inactive pool <b class="mono">690,407</b> (85.3%) is the addressable pool — not a forecast of willing traders. Highly Active (T3) 82,086 · Active-but-not-Highly 37,253 (down from 40,946).</p></div>
+</div>
+<div class="grid2">
+<div class="card"><h3>Static targets (fixed 809,746 denominator only)</h3><table><tr><th>Uplift</th><th class="num">Target rate</th><th class="num">Extra actives</th></tr><tr><td>+200 bps</td><td class="num">16.74%</td><td class="num">16,195</td></tr><tr><td>+250 bps</td><td class="num">17.24%</td><td class="num">20,244</td></tr><tr><td>+300 bps</td><td class="num">17.74%</td><td class="num">24,292</td></tr></table><p style="color:var(--slate);font-size:12.5px">Illustrations only — denominator growth and roll-off change the real requirement. See Targets &amp; Scenarios.</p></div>
+<div class="card"><h3>Upcoming gates &amp; risks</h3><p style="font-size:13px"><b>G0 (W1–2)</b> Baseline signed off · <b>G1 (W2–4)</b> First-login lift vs holdout · <b>G2 (W3–7)</b> Lab data-rights &amp; compliance sign-off.<br><br>Top risks: overstated activation maths · Salary low intent · Replay Lab may not convert · bank-app integration slip. Full register on Roadmap &amp; Reports pages.</p><button class="btn primary" data-goto="roadmap">Open roadmap →</button></div>
+</div>
+</section>
+
+<!-- ACTIVATION -->
+<section class="page" data-page="activation"><h2 style="margin-top:0">Activation Analytics</h2>
+<div class="card"><h3>Portfolio trend — Exhibit 1 [CASE]/[CALC]</h3><div style="overflow-x:auto"><table id="trendTable"><tr><th>Measure</th><th class="num">Sep 2025</th><th class="num">Sep 2026</th><th class="num">Change</th></tr></table></div>
+<p style="font-size:13px"><b>Definitions:</b> Active = ≥1 executed trade in T12 · Highly Active = ≥1 trade in T3 · Dormant = no trade in 24 months (exact count <b>unavailable</b> in case exhibits) · Case “Inactive” = fraud/regulator-deactivated — excluded from marketing, not to be confused with not-traded.</p>
+<p style="font-size:13px"><b>Formula:</b> Activation rate = T12 active ÷ eligible = 119,339 ÷ 809,746 = <b class="mono">14.7378%</b> → reported 14.74%. All pages use this single denominator/period.</p></div>
+<div class="card"><h3>Target attainment</h3><p style="font-size:13px">Current 14.74% · Case target band +200–300 bps (16.74–17.74% static). Gap on fixed base: 16,195–24,292 actives. End-period gap is larger once growth + roll-off apply — modelled live on the Scenarios page.</p><div class="bar"><i style="width:14.74%"></i></div><p style="color:var(--slate);font-size:12px">Bar = current rate share of 100% scale (not attainment).</p></div>
+</section>
+
+<!-- COHORTS -->
+<section class="page" data-page="cohorts"><h2 style="margin-top:0">Cohort Analysis</h2><p style="color:var(--slate)">Sep 2026 [CASE]; counts from rounded % are approximate [CALC]. Click a row for the cohort playbook.</p>
+<div class="card"><div id="chartCohorts"></div><div style="overflow-x:auto"><table id="cohortTable"><thead><tr><th>Cohort</th><th class="num">Accounts</th><th class="num">Share</th><th class="num">T12</th><th class="num">T3</th><th class="num">Last mo.</th><th>Role</th></tr></thead><tbody></tbody></table></div>
+<p style="font-size:13px"><b>Salary</b> ≈539,954 T12-inactive — the scale lever. <b>Elevate ⚠</b> last-month activity fell 24% → 13% YoY (T12 41% → 37%): investigate recent lapsing; cause not proven. <b>Credit Card</b>: low-cost rediscovery only.</p></div>
+</section>
+
+<!-- REACTIVATION -->
+<section class="page" data-page="reactivation"><h2 style="margin-top:0">Reactivation Engine</h2>
+<div class="card"><h3>Confidence Ladder — stages only (no fabricated counts)</h3><div id="ladder"></div><p style="color:var(--slate);font-size:12.5px">A customer may stop at any rung. Learning completion is valuable even without a trade.</p></div>
+<div class="grid2" id="engines"></div>
+<div class="card"><h3>Four barriers → responses</h3><table><tr><th>Barrier</th><th>Thought</th><th>Response</th></tr><tr><td>Awareness</td><td>“Did I even open this?”</td><td>Rediscovery, status, secure deep link</td></tr><tr><td>Capability</td><td>“I don’t know where to begin.”</td><td>Plain-language walkthroughs, charges explained</td></tr><tr><td>Confidence</td><td>“I could lose money.”</td><td>Historical education, balanced risk, optional practice</td></tr><tr><td>Habit</td><td>“I only look when something happens.”</td><td>User-set goals, digest, review reminders</td></tr></table></div>
+<div class="card"><h3>Personas (hypotheses to validate)</h3><div class="grid3" id="personas"></div></div>
+</section>
+
+<!-- CAMPAIGNS -->
+<section class="page" data-page="campaigns"><h2 style="margin-top:0">Campaign Performance</h2>
+<div class="warn">Campaign <b>results are Not yet reported</b> — cells below are planned engine × cohort treatments [PROPOSAL]. No reach, conversion, spend-actual or ROI is invented.</div>
+<div class="card"><div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px"><input type="search" id="campSearch" placeholder="Search campaigns…"><select id="campFilter"><option value="">All engines</option><option>Rediscover</option><option>Rehearse</option><option>Participate Safely</option><option>Sustain</option></select></div>
+<div style="overflow-x:auto"><table id="campTable"><thead><tr><th>Cell</th><th>Engine</th><th>Cohort</th><th>Status</th><th>Results</th></tr></thead><tbody></tbody></table></div>
+<p style="font-size:13px"><b>Funnel tracked when live:</b> Eligible → valid-consent reach → delivered → first login (7/21d) → orientation → lesson/replay → qualifying activity → second action. <b>Guardrails:</b> 10% randomised holdout per stratum · consent/suppression error = zero tolerance, pause channel · opt-out alert ~1.5–2% per touch · F&amp;O first-action share must not rise · promotional pause in Stress state.</p></div>
+</section>
+
+<!-- INITIATIVES -->
+<section class="page" data-page="initiatives"><h2 style="margin-top:0">GTM Initiatives</h2><div id="initList"></div></section>
+
+<!-- BUDGET -->
+<section class="page" data-page="budget"><h2 style="margin-top:0">Budget &amp; ROI</h2>
+<div class="warn">Pricing anomaly: brokerage shown as ₹0.15/order (cash) and ₹0.20/order (F&amp;O) — possibly ₹15/₹20 or another unit. <b>Revenue / ROI / payback = Unavailable</b> until confirmed. CPA ₹125 (₹25L÷20,000) and ₹260 (₹65L÷25,100) are arithmetic only, not proven unit costs.</div>
+<div class="grid2"><div class="card"><h3>Proposed pilot budget — ₹26.0L [PROPOSAL]</h3><div id="chartBudget"></div><div style="overflow-x:auto"><table id="budgetTable"><thead><tr><th>Line</th><th class="num">₹ lakh</th><th class="num">Share</th></tr></thead><tbody></tbody></table></div><p style="font-size:13px">No paid media · no incentives/prizes. Actual &amp; committed spend: <b>Not reported</b>. ₹65L plan = later scale option only. Correct CPA = actual cost ÷ incremental actives vs holdout.</p></div>
+<div class="card"><h3>Scenario cost view</h3><p style="font-size:13px">At the scenario defaults (25,100 programme activations), ₹26.0L ÷ 25,100 ≈ <b class="mono">₹104</b> per <i>gross</i> activation — shown only to expose the arithmetic; it is <b>not</b> incremental CPA and must not be reported as ROI.</p></div></div>
+</section>
+
+<!-- SCENARIOS -->
+<section class="page" data-page="scenarios"><h2 style="margin-top:0">Targets &amp; Scenarios</h2>
+<div class="warn"><b>Conflict flag:</b> Cohort build ≈19,452 actives (~+240 bps, fixed base) vs Model B 16,600 / 25,100 / 34,600 labelled +145 / +247 / +362 bps with base final 17.21% — components do not reconcile to the end-state rate. <b>Not a validated forecast.</b> The engine below is a transparent sensitivity, not a promise.</div>
+<div class="grid2"><div class="card"><h3>Assumptions (editable)</h3>
+<label>Base growth (new eligible accounts) <b class="mono" id="vGrowth"></b></label><input type="range" id="inGrowth" min="0" max="50000" step="500" value="19000"><input type="number" id="nGrowth" value="19000" style="width:110px">
+<label style="display:block;margin-top:10px">T12 roll-off [ASSUMPTION] <b class="mono" id="vRoll"></b></label><input type="range" id="inRoll" min="0" max="40000" step="100" value="16195"><input type="number" id="nRoll" value="16195" style="width:110px">
+<label style="display:block;margin-top:10px">Organic activation rate % <b class="mono" id="vOrg"></b></label><input type="range" id="inOrg" min="0" max="30" step="0.1" value="14.74"><input type="number" id="nOrg" value="14.74" step="0.1" style="width:110px">
+<label style="display:block;margin-top:10px">Target uplift (bps) <b class="mono" id="vBps"></b></label><input type="range" id="inBps" min="0" max="500" step="10" value="250"><input type="number" id="nBps" value="250" style="width:110px">
+<label style="display:block;margin-top:10px">Incremental programme activations <b class="mono" id="vProg"></b></label><input type="range" id="inProg" min="0" max="60000" step="100" value="25100"><input type="number" id="nProg" value="25100" style="width:110px">
+<div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap"><button class="btn" id="presetCons">Conservative 16,600</button><button class="btn" id="presetBase">Base 25,100</button><button class="btn" id="presetStretch">Stretch 34,600</button><button class="btn" id="resetScen">Reset defaults</button><button class="btn primary" id="saveScen">Save scenario (session)</button></div>
+<p style="color:var(--slate);font-size:12.5px">Formulas: End denom = 809,746 + growth · Counterfactual = 119,339 − roll-off + growth × organic% · Required = (14.7378% + uplift) × end denom · With programme = counterfactual + programme activations.</p>
+<div id="savedList" style="font-size:13px"></div></div>
+<div class="card"><h3>Live results</h3><div id="scenOut" style="font-size:14px"></div><div id="chartScen"></div></div></div>
+</section>
+
+<!-- ROADMAP -->
+<section class="page" data-page="roadmap"><h2 style="margin-top:0">Execution Roadmap — 12 weeks</h2>
+<div class="card"><div style="display:flex;gap:8px;margin-bottom:10px"><select id="phaseFilter"><option value="">All phases</option><option>Foundation</option><option>Quick wins</option><option>Lab</option><option>Participation</option><option>Sustain</option><option>Optimise</option></select></div><div id="roadList"></div></div>
+<div class="grid2"><div class="card"><h3>Volatility playbook</h3><table><tr><th>State</th><th>Posture</th></tr><tr><td><b>Calm</b></td><td>Normal capped cadence; rediscovery, lessons, replay.</td></tr><tr><td><b>Choppy</b></td><td>Lower promo frequency; volatility/risk education.</td></tr><tr><td><b>Stress</b></td><td>Pause promotions; service messages + calm explainers only. No “buy the dip”.</td></tr></table><p style="font-size:12.5px;color:var(--slate)">Thresholds (VIX/drawdown) are proposals for Risk/Research to approve. Banned copy: “last chance”, “don’t miss the dip”, “guaranteed”, “safe returns”, “earn ₹X”, guilt/shame, return screenshots, leaderboards.</p></div>
+<div class="card"><h3>Compliance non-negotiables</h3><p style="font-size:13px">No return promises · no advice in marketing · no activation inducements · no live-price game/P&amp;L leaderboard · no F&amp;O-first activation · no dark patterns · consent &amp; purpose limitation · exclude fraud/regulator-deactivated accounts · show costs &amp; risks · stress-state pause. Replay Lab ships lesson-only until data-rights + Legal/Compliance sign-off.</p></div></div>
+</section>
+
+<!-- EXPLORER -->
+<section class="page" data-page="explorer"><h2 style="margin-top:0">Data Explorer</h2>
+<div class="card"><div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px">
+<select id="dsSelect"><option value="cohorts">Cohorts</option><option value="budget">Budget lines</option><option value="targets">Static targets</option></select>
+<input type="search" id="exSearch" placeholder="Filter rows…"><button class="btn" id="csvBtn">⬇ Export CSV (filtered)</button>
+<label style="font-size:13px"><input type="checkbox" id="colToggle" checked> Show rates</label></div>
+<div style="overflow-x:auto"><table id="exTable"></table></div>
+<div style="display:flex;gap:8px;margin-top:10px;align-items:center"><button class="btn" id="prevPg">← Prev</button><span id="pgInfo" class="mono"></span><button class="btn" id="nextPg">Next →</button><span style="color:var(--slate);font-size:12px">Click a header to sort. Source: ONL_Trade_Master_GTM_Strategy.md [CASE]/[CALC]/[PROPOSAL].</span></div></div>
+</section>
+
+<!-- REPORTS -->
+<section class="page" data-page="reports"><h2 style="margin-top:0">Reports &amp; Settings</h2>
+<div class="grid2"><div class="card"><h3>Report summary</h3><p style="font-size:13.5px">ABHYAAS — From Ghost to Habit. Baseline 809,746 eligible · 119,339 T12 active (14.74%) · 690,407 inactive. Pilot proposal ₹26.0L, 12 weeks, owned channels, 10% holdout. Target band +200–300 bps is an aim, not a proven forecast.</p>
+<span class="pill">Print from your browser menu — layout is print-clean</span> <button class="btn" id="repCsv">⬇ Download summary CSV</button>
+<h3 style="margin-top:16px">Week-12 scorecard (required reporting)</h3><p style="font-size:13px">T12 rate baseline/end/bps + denominator · treatment-vs-holdout uplift by cohort · actual roll-off &amp; method · new accounts organic vs treatment · funnel login→learning→first→second action · T3 quality, complaints, opt-outs, F&amp;O first-action share · actual spend &amp; cost per incremental/retained active · scale/iterate/stop decision with owners.</p></div>
+<div class="card"><h3>Settings &amp; honesty note</h3><p style="font-size:13.5px"><b>Static HTML snapshot:</b> this export has <b>no server</b>. Theme, saved scenarios and preferences persist only in this browser (local storage / session) and reset if storage is cleared — there is no server persistence, sync or live data. Baseline figures are a Sep 2026 snapshot, not live.</p>
+<label>Theme <select id="themeSel"><option value="system">System</option><option value="light">Light</option><option value="dark">Dark</option></select></label>
+<h3 style="margin-top:14px">Assumptions register</h3><p style="font-size:13px">Growth 19,000 [ASSUMPTION] · Roll-off ~16,195 [ASSUMPTION — needs T9/last-trade data] · Organic 14.74% [ASSUMPTION] · Budget ₹26L [PROPOSAL] · Dormant exact count: unavailable · Pricing units: unconfirmed.</p>
+<h3>10 open questions (Gate G0)</h3><ol style="font-size:13px;padding-left:18px"><li>Is +200–300 bps end-state change or treatment–control uplift?</li><li>Does SIP/MF count as Active?</li><li>T9/last-trade distribution for roll-off?</li><li>Expected new accounts &amp; organic curve?</li><li>Exact brokerage/fee units?</li><li>Marketing consent by channel/purpose?</li><li>Can bank app host ONL card + deep link?</li><li>Replay Lab data licence &amp; lag?</li><li>Highly Active / revenue-active definitions?</li><li>Approved stress thresholds &amp; pause owners?</li></ol>
+<p style="font-size:12.5px;color:var(--slate)"><b>Gate G0:</b> no forecast signed until Q1–5 answered or caveated; no launch until consent + compliance cleared. Evidence: [CASE] case exhibits · [CALC] arithmetic · [ASSUMPTION] to validate · [PROPOSAL] recommendation.</p></div></div>
+<div class="card"><h3>Risk register (10)</h3><div style="overflow-x:auto"><table><tr><th>Risk</th><th>Mitigation</th></tr>
+<tr><td>Maths overstated</td><td>Rebuild from last-trade data; report end-state + uplift separately</td></tr><tr><td>Salary low intent</td><td>Awareness/education first; scale only on incremental lift</td></tr><tr><td>Lab doesn’t convert</td><td>Test the bridge; lesson-only success counts</td></tr><tr><td>Regulatory unclear</td><td>Written sign-off; lesson-only fallback</td></tr><tr><td>Bank-app slip</td><td>Secure-link fallback</td></tr><tr><td>Message fatigue</td><td>Caps, unified suppression, holdout</td></tr><tr><td>Losses after activation</td><td>No promises, risk transparency, no F&amp;O-first</td></tr><tr><td>Scope expands</td><td>MVP boundary, no core rebuild</td></tr><tr><td>Revenue assumptions wrong</td><td>Confirm pricing first; formulas only</td></tr><tr><td>Cohort ≠ behaviour</td><td>Validate personas with funnel data</td></tr></table></div></div>
+</section>
+
+</div><footer>ABHYAAS · HTML Snapshot (static export of the ABHYAAS dashboard) · Source: ONL_Trade_Master_GTM_Strategy.md — “From Ghost to Habit: Project Abhyaas”, Arthik Khayal ’26. Baseline is Sep 2026 case data, not live. Conflicts are flagged, never silently reconciled.</footer>
+</main></div>
+
+<div class="drawer" id="drawer" role="dialog" aria-modal="false"><button class="btn" id="drawerClose">✕ Close</button><div id="drawerBody" style="margin-top:12px"></div></div>
+<div class="modal" id="cmdModal"><div class="box"><h3 style="margin-top:0">Go to page</h3><div id="cmdList"></div><button class="btn" id="cmdClose" style="margin-top:10px">Close</button></div></div>
+<div class="modal" id="notifModal"><div class="box"><h3 style="margin-top:0">Alerts</h3><p style="font-size:13.5px">⚠ <b>Scenario conflict</b> — Model B does not reconcile; do not quote 17.21% as a forecast.<br><br>⚠ <b>Elevate drop</b> — last-month activity 24% → 13% YoY; diagnosis required.<br><br>⚠ <b>Pricing anomaly</b> — ₹0.15/₹0.20 unconfirmed; ROI unavailable.</p><button class="btn" id="notifClose">Close</button></div></div>
+<div class="modal" id="profileModal"><div class="box"><h3 style="margin-top:0">Profile</h3><p style="font-size:13.5px">Viewer of the ABHYAAS static snapshot. No account or server sign-in exists in this export.</p><button class="btn" data-goto="reports">Open Reports &amp; Settings</button> <button class="btn" id="profileClose">Close</button></div></div>
+
+<script>
+var BASE={elig:809746,act:119339,rate:119339/809746,inact:690407};
+var COHORTS=[
+{n:"Salary Account",a:627853,s:77.5,t12:14,t3:9,lm:6,role:"Main scale lever",job:"Awareness, first login, capability",eng:"1 → 2 → 3 → 4",ch:"Bank app, net banking, consented CRM, employer education"},
+{n:"Credit Card",a:73317,s:9.1,t12:6,t3:5,lm:4,role:"Low-cost rediscovery only",job:"Low-cost awareness only",eng:"1",ch:"Statement insert/email/app where consented"},
+{n:"Preferred",a:60312,s:7.4,t12:20,t3:14,lm:9,role:"Warm activation & habit",job:"Re-engage and form a routine",eng:"2 → 3 → 4",ch:"Bank app, digest, optional service outreach"},
+{n:"Elite",a:35697,s:4.4,t12:32,t3:22,lm:15,role:"Retention & trust repair",job:"Trust repair and retention",eng:"4 + RM service",ch:"RM, service email, digest"},
+{n:"Elevate",a:9471,s:1.2,t12:37,t3:27,lm:13,role:"Diagnose recent drop-off ⚠",job:"Diagnose recent drop-off",eng:"4 + targeted 2",ch:"Consented service, digest, learning path"},
+{n:"Prestige",a:3096,s:0.4,t12:35,t3:22,lm:16,role:"High-touch service",job:"Relevant high-touch service",eng:"4 + RM",ch:"RM/relationship channel, consented digest"}];
+var BUDGET=[["Content and vernacular production",9.0,34.6],["Product/front-end and analytics build",6.5,25.0],["CRM/messaging and channel operations",5.0,19.2],["Employer/branch/RM enablement",2.0,7.7],["Research, measurement and QA",1.5,5.8],["Compliance/legal/data-rights review",2.0,7.7]];
+var PAGES=[["overview","Overview","Command"],["activation","Activation Analytics","Analyse"],["cohorts","Cohort Analysis","Analyse"],["reactivation","Reactivation Engine","Execute"],["campaigns","Campaign Performance","Execute"],["initiatives","GTM Initiatives","Execute"],["budget","Budget & ROI","Plan"],["scenarios","Targets & Scenarios","Plan"],["roadmap","Execution Roadmap","Plan"],["explorer","Data Explorer","Data"],["reports","Reports & Settings","Data"]];
+var ICONS={overview:"◈",activation:"◉",cohorts:"▦",reactivation:"↻",campaigns:"✦",initiatives:"◆",budget:"₹",scenarios:"◎",roadmap:"▤",explorer:"☰",reports:"⚙"};
+function fmt(n){return Math.round(n).toLocaleString("en-IN")}
+function go(id){document.querySelectorAll(".page").forEach(function(p){p.classList.toggle("active",p.dataset.page===id)});var t=PAGES.filter(function(p){return p[0]===id})[0];document.getElementById("pageTitle").textContent=t[1];document.getElementById("crumb").textContent="ABHYAAS / "+t[1];document.querySelectorAll(".navbtn").forEach(function(b){b.classList.toggle("active",b.dataset.go===id)});document.getElementById("sidebar").classList.remove("open");window.scrollTo(0,0)}
+var nav=document.getElementById("nav"),lastGrp="";
+PAGES.forEach(function(p){if(p[2]!==lastGrp){lastGrp=p[2];var g=document.createElement("div");g.className="grp";g.textContent=lastGrp;nav.appendChild(g)}var b=document.createElement("button");b.className="navbtn"+(p[0]==="overview"?" active":"");b.dataset.go=p[0];b.innerHTML="<span>"+ICONS[p[0]]+"</span><span class='lbl'>"+p[1]+"</span>";b.onclick=function(){go(p[0])};nav.appendChild(b)});
+document.querySelectorAll("[data-goto]").forEach(function(el){el.addEventListener("click",function(){go(el.dataset.goto);document.querySelectorAll(".modal").forEach(function(m){m.classList.remove("open")})})});
+/* KPIs + count-up */
+var KPIS=[["Eligible accounts","809,746","+75,891 (+10.3%) YoY [CASE]","cohorts"],["T12 active accounts","119,339","+11,450 (+10.6%) YoY","activation"],["Activation rate","14.74%","Exact 14.7378% · +4 bps YoY","activation"],["T12 inactive accounts","690,407","85.3% addressable pool","cohorts"],["Highly Active (T3)","82,086","10.14% · +22.6% YoY","activation"],["Target gap (+250 bps)","20,244","Extra actives, fixed base only","scenarios"],["Pilot budget [PROPOSAL]","₹26.0L","Actual spend: Not reported","budget"],["Holdout","10%","Randomised, per stratum","campaigns"]];
+var kpiEl=document.getElementById("kpis");
+KPIS.forEach(function(k){var b=document.createElement("button");b.className="kpi";b.innerHTML="<div class='l'>"+k[0]+"</div><div class='v'>"+k[1]+"</div><div class='d' style='color:var(--slate)'>"+k[2]+"</div>";b.onclick=function(){go(k[3])};kpiEl.appendChild(b)});
+/* Charts (SVG, hand-authored) */
+function bars(el,items,max,color){var h="";items.forEach(function(it){var w=Math.max(2,it[1]/max*100);h+="<div style='display:flex;gap:8px;align-items:center;margin:6px 0;font-size:12.5px'><span style='width:120px;flex-shrink:0'>"+it[0]+"</span><div class='bar' style='flex:1'><i style='width:"+w+"%;background:"+(it[2]||color||"#477A55")+"'></i></div><b class='mono' style='width:86px;text-align:right'>"+it[3]+"</b></div>"});document.getElementById(el).innerHTML=h}
+bars("chartBaseline",[["Eligible ’25",733855,809746,0,"#667085","733,855"],["Eligible ’26",809746,809746,0,"#102820","809,746"],["Active ’25",107889,809746,0,"#8FB996","107,889"],["Active ’26",119339,809746,0,"#477A55","119,339"]].map(function(x){return[x[0],x[1],x[4],x[5]]}),809746);
+document.getElementById("chartComp").innerHTML="<div style='display:flex;gap:14px;align-items:center;flex-wrap:wrap'><svg viewBox='0 0 120 120' width='120' height='120' role='img' aria-label='Composition donut' style='flex-shrink:0'><circle cx='60' cy='60' r='42' fill='none' stroke='#CBD5C5' stroke-width='20'/><circle cx='60' cy='60' r='42' fill='none' stroke='#477A55' stroke-width='20' stroke-dasharray='39 225' transform='rotate(-90 60 60)'/><text x='60' y='65' text-anchor='middle' font-size='14' font-weight='700'>14.7%</text></svg><div style='font-size:13px;min-width:170px;flex:1'><p style='margin:4px 0'>■ Active T12 — <b class='mono'>119,339</b></p><p style='margin:4px 0'>■ Inactive — <b class='mono'>690,407</b></p><p style='margin:4px 0'>of which Highly Active (T3): <b class='mono'>82,086</b></p></div></div>";
+bars("chartCohorts",COHORTS.map(function(c){return[c.n.split(" ")[0],c.t12,0,c.t12+"% T12"]}),40);
+bars("chartBudget",BUDGET.map(function(b){return[b[0].split(" ")[0],b[1],0,"₹"+b[1].toFixed(1)+"L"]}),9);
+/* Trend table */
+var TREND=[["Eligible accounts",733855,809746,"+75,891 (+10.3%)"],["Active, T12",107889,119339,"+11,450 (+10.6%)"],["Activation rate","14.70%","14.74%","+0.04 pp (~+4 bps)"],["Highly Active, T3",66943,82086,"+15,143 (+22.6%)"],["Highly Active rate","9.12%","10.14%","+1.02 pp (~+102 bps)"],["Not Active in T12",625966,690407,"+64,441"],["Active but not Highly Active",40946,37253,"−3,693"]];
+document.getElementById("trendTable").innerHTML="<tr><th>Measure</th><th class='num'>Sep 2025</th><th class='num'>Sep 2026</th><th class='num'>Change</th></tr>"+TREND.map(function(r){return"<tr><td>"+r[0]+"</td><td class='num'>"+(typeof r[1]==="number"?fmt(r[1]):r[1])+"</td><td class='num'>"+(typeof r[2]==="number"?fmt(r[2]):r[2])+"</td><td class='num'>"+r[3]+"</td></tr>"}).join("");
+/* Cohorts */
+var ct=document.querySelector("#cohortTable tbody");
+COHORTS.forEach(function(c){var tr=document.createElement("tr");tr.style.cursor="pointer";tr.innerHTML="<td><b>"+c.n+"</b></td><td class='num'>"+fmt(c.a)+"</td><td class='num'>"+c.s.toFixed(1)+"%</td><td class='num'>"+c.t12+"%</td><td class='num'>"+c.t3+"%</td><td class='num'>"+c.lm+"%</td><td>"+c.role+"</td>";tr.onclick=function(){openDrawer("<h3 style='margin-top:0'>"+c.n+"</h3><p><b>Accounts:</b> "+fmt(c.a)+" ("+c.s.toFixed(1)+"% of base) · <b>T12 inactive ≈</b> "+fmt(c.a*(1-c.t12/100))+"</p><p><b>Primary job:</b> "+c.job+"</p><p><b>Lead engine(s):</b> "+c.eng+"</p><p><b>Channels:</b> "+c.ch+"</p><p><b>Success signal:</b> lift vs 10% holdout; T12 and T3 tracked separately.</p>"+(c.n==="Elevate"?"<p class='warn' style='padding:10px'>⚠ Last-month activity fell 24% → 13% YoY; T12 41% → 37%. Investigate — cause not proven.</p>":""))};ct.appendChild(tr)});
+document.getElementById("budgetTable").querySelector("tbody").innerHTML=BUDGET.map(function(b){return"<tr><td>"+b[0]+"</td><td class='num'>"+b[1].toFixed(1)+"</td><td class='num'>"+b[2].toFixed(1)+"%</td></tr>"}).join("")+"<tr><td><b>Total</b></td><td class='num'><b>26.0</b></td><td class='num'><b>100%</b></td></tr>";
+/* Ladder, engines, personas, initiatives */
+var LADDER=[["0 · Ghost","Doesn’t remember the account","Account reminder via consented bank surface","Secure view / first login"],["1 · Aware","Knows it exists, not what to do","Onboarding, features & charges","Completes orientation"],["2 · Rehearsed","Interested but uncertain","Replay Lab + lessons","Lesson/replay + comprehension check"],["3 · Ready","Understands options & risks","Neutral pathways, cost preview, limits","Independently chooses"],["4 · First step","Taken a suitable action — or consciously not","Clear flow, confirmation, support","Qualifying activity"],["5 · Habit","Uses platform for useful reviews","Goal review, digest, alerts","Repeat engagement, T3 retention"],["6 · Advocate","Has learned something useful","Optional lesson card","Shares learning — never P&L"]];
+document.getElementById("ladder").innerHTML=LADDER.map(function(l,i){return"<div style='display:flex;gap:10px;padding:8px 0;border-bottom:1px solid var(--border)'><span class='pill'>"+l[0]+"</span><div style='font-size:13px'><b>"+l[1]+"</b> — "+l[2]+" · <i>Success:</i> "+l[3]+"</div></div>"}).join("");
+var ENG=[["Engine 1 — REDISCOVER","Awareness → first login","Bank-app card & net-banking placement · secure SSO/deep link · salary-credit explainer · CC statement insert (consented) · RM/branch script · max 3 touches, suppress on login/opt-out."],
+["Engine 2 — REHEARSE · Abhyaas Lab","Fear → capability","Standalone historical Replay Lab (lagged data, simulated, no cash value) · 3 episodes · modules on volatility, diversification, orders, charges, SIP · Process Score on comprehension — never P&L/leaderboards · EN + Hindi/Hinglish. Hard gates: data rights + Compliance."],
+["Engine 3 — PARTICIPATE SAFELY","Confidence → first suitable step","Clear pathways & charge/risk preview · guided first-action flow · optional user-set alerts/limits (alert fallback if no hard cap) · SIP/MF & equity as options · derivatives out of beginner journeys · no incentives."],
+["Engine 4 — SUSTAIN","First step → useful habit","Customer-chosen weekly digest · goal review & health-check · salary-cycle education · second-action journey · shame-free lapse recovery · learning streaks for curriculum only."]];
+document.getElementById("engines").innerHTML=ENG.map(function(e){return"<div class='card' style='margin:0'><h3>"+e[0]+"</h3><p style='font-size:12px;color:var(--slate);font-weight:700'>"+e[1]+"</p><p style='font-size:13px'>"+e[2]+"</p></div>"}).join("");
+var PER=[["Forgetful Ghost","Doesn’t know the account exists","Secure rediscovery + orientation","“You are missing out” copy"],["Curious Window-Shopper","Interest but fear / low competence","Short lesson + Replay Lab","Complex charts, instant order prompts"],["Funded Fence-Sitter","Waiting for the “right time”","Explain options, costs, risk","Market predictions, “buy the dip”"],["Burnt Lapser","Negative past experience","Neutral health-check, risk education, support","Shame, guilt, guaranteed recovery"],["Fragile Active","Acts only on events","Digest, goal review, user-set alerts","More-trades / high-frequency pressure"],["High-Value Quiet Client","Has another broker / low attention","Consented RM service review","Treating balances as permission to push"]];
+document.getElementById("personas").innerHTML=PER.map(function(p){return"<div style='border:1px solid var(--border);border-radius:8px;padding:10px'><b style='font-size:13px'>"+p[0]+"</b><p style='font-size:12.5px;margin:4px 0'>Barrier: "+p[1]+"<br>First move: "+p[2]+"<br><span style='color:var(--risk)'>Avoid: "+p[3]+"</span></p></div>"}).join("");
+var INIT=[["Rediscover — owned-channel activation","Salary + Credit Card","Engines 1","W2–4 · Gate G1","CRM, Bank Digital, Corporate Banking"],["Abhyaas Lab MVP","Curious / fence-sitter pools","Engine 2","W3–7 · Gate G2","Product, Engineering, Design, Content, Compliance"],["Safe participation flows","Ready customers","Engine 3","W5–9 · Gate G3","Product, Engineering, Risk, Compliance"],["Sustain — digest & second action","Preferred, Elite, Elevate, Prestige","Engine 4","W7–10 · Gate G4","CRM, Product, Analytics"],["Foundation — data, consent, holdout","All cohorts","Enabler","W1–2 · Gate G0","Growth PM, Analytics, Compliance, Legal, Risk"],["Optimise & audited readout","All cohorts","Measurement","W9–12 · Gate G5","Growth PM, Analytics, Finance, Compliance"]];
+document.getElementById("initList").innerHTML=INIT.map(function(x){return"<div class='card'><h3>"+x[0]+"</h3><p style='font-size:13px;margin:4px 0'>Audience: "+x[1]+" · "+x[2]+" · "+x[3]+"<br>Owners: "+x[4]+" · Status: <span class='pill'>Planned [PROPOSAL]</span> · Results: Not yet reported</p><button class='btn' onclick='openDrawer(\"<h3 style=margin-top:0>"+x[0]+"</h3><p style=font-size:13.5px>Objective, rationale and success metrics follow the master strategy: measure incremental lift vs the 10% holdout, report T12 and T3 separately, and pause on any guardrail breach. No outcome is claimed before measurement.</p>\")'>View detail →</button></div>"}).join("");
+/* Campaigns */
+var CAMPS=[];["Rediscover","Rehearse","Participate Safely","Sustain"].forEach(function(e){COHORTS.forEach(function(c){CAMPS.push([e+" × "+c.n,e,c.n])})});
+function renderCamps(){var q=(document.getElementById("campSearch").value||"").toLowerCase(),f=document.getElementById("campFilter").value;document.querySelector("#campTable tbody").innerHTML=CAMPS.filter(function(c){return(!f||c[1]===f)&&c[0].toLowerCase().indexOf(q)>-1}).map(function(c){return"<tr><td><b>"+c[0]+"</b></td><td>"+c[1]+"</td><td>"+c[2]+"</td><td><span class='pill'>Planned · Proposal</span></td><td>Not yet reported</td></tr>"}).join("")||"<tr><td colspan='5'>No matching planned cells.</td></tr>"}
+document.getElementById("campSearch").addEventListener("input",renderCamps);document.getElementById("campFilter").addEventListener("change",renderCamps);renderCamps();
+/* Roadmap */
+var ROAD=[["W1–2 · Foundation","Foundation","T12/T9/T3 + last-trade extract; consent audit; funnel baseline; KPI definitions; 10% holdout; data-rights review.","Growth PM, Analytics, Compliance, Legal, Risk","G0"],["W2–4 · Owned-channel quick wins","Quick wins","Bank-app card; net-banking placement; capped rediscovery series; RM/branch script; employer pilot.","CRM, Bank Digital, Corporate Banking, Content","G1"],["W3–7 · Abhyaas Lab MVP","Lab","Three historical episodes; lessons; Process Score; Hindi/English; accessibility & QA.","Product, Engineering, Design, Content, Compliance","G2"],["W5–9 · Safe participation","Participation","Product pathways, charge preview, guided flow, optional alerts/limits, risk education.","Product, Engineering, Risk, Compliance","G3"],["W7–10 · Sustain","Sustain","Digest preferences, health-check, reminders, second-action journey, lapse recovery.","CRM, Product, Analytics","G4"],["W9–12 · Optimise & report","Optimise","Scale winners, stop weak cells, validate roll-off, end-period readout, next-quarter plan.","Growth PM, Analytics, Finance, Compliance","G5"]];
+function renderRoad(){var f=document.getElementById("phaseFilter").value;document.getElementById("roadList").innerHTML=ROAD.filter(function(r){return!f||r[1]===f}).map(function(r){return"<div style='padding:10px 0;border-bottom:1px solid var(--border)'><b>"+r[0]+"</b> <span class='pill'>"+r[4]+"</span><p style='font-size:13px;margin:4px 0'>"+r[2]+"</p><span style='font-size:12.5px;color:var(--slate)'>Owners: "+r[3]+"</span></div>"}).join("")}
+document.getElementById("phaseFilter").addEventListener("change",renderRoad);renderRoad();
+/* Scenario engine — verified maths */
+var saved=[];
+function scenCalc(){var g=+document.getElementById("nGrowth").value||0,r=+document.getElementById("nRoll").value||0,o=(+document.getElementById("nOrg").value||0)/100,bps=+document.getElementById("nBps").value||0,prog=+document.getElementById("nProg").value||0;
+["Growth","Roll","Org","Bps","Prog"].forEach(function(k){});document.getElementById("vGrowth").textContent=fmt(g);document.getElementById("vRoll").textContent=fmt(r);document.getElementById("vOrg").textContent=(o*100).toFixed(2)+"%";document.getElementById("vBps").textContent="+"+bps+" bps";document.getElementById("vProg").textContent=fmt(prog);
+var endD=BASE.elig+g, cf=BASE.act-r+g*o, cfRate=cf/endD*100, req=(BASE.rate+bps/10000)*endD, reqRate=(BASE.rate+bps/10000)*100, withP=cf+prog, withRate=withP/endD*100, gap=req-cf, met=withP>=req;
+document.getElementById("scenOut").innerHTML="<p>End denominator: <b class='mono'>"+fmt(endD)+"</b></p><p>No-programme counterfactual: <b class='mono'>"+fmt(cf)+" actives ≈ "+cfRate.toFixed(2)+"%</b></p><p>Required for +"+bps+" bps ("+reqRate.toFixed(2)+"%): <b class='mono'>"+fmt(req)+" actives</b></p><p>Gap vs counterfactual: <b class='mono'>"+fmt(gap)+"</b> · With programme ("+fmt(prog)+"): <b class='mono'>"+fmt(withP)+" ("+withRate.toFixed(2)+"%)</b> — <b style='color:"+(met?"var(--success)":"var(--risk)")+"'>"+(met?"Target met in this sensitivity":"Short by "+fmt(req-withP))+"</b></p><p style='color:var(--slate);font-size:12.5px'>Sensitivity only — roll-off & organic rate are assumptions until T9/last-trade data validates them.</p>";
+bars("chartScen",[["Counterfactual",cf,0,fmt(cf)],["With programme",withP,0,fmt(withP)],["Required",req,0,fmt(req)]],Math.max(req,withP,cf))}
+function bindPair(r,n){var R=document.getElementById(r),N=document.getElementById(n);R.addEventListener("input",function(){N.value=R.value;scenCalc()});N.addEventListener("input",function(){R.value=N.value;scenCalc()})}
+bindPair("inGrowth","nGrowth");bindPair("inRoll","nRoll");bindPair("inOrg","nOrg");bindPair("inBps","nBps");bindPair("inProg","nProg");
+function setProg(v){document.getElementById("nProg").value=v;document.getElementById("inProg").value=v;scenCalc()}
+document.getElementById("presetCons").onclick=function(){setProg(16600)};document.getElementById("presetBase").onclick=function(){setProg(25100)};document.getElementById("presetStretch").onclick=function(){setProg(34600)};
+document.getElementById("resetScen").onclick=function(){document.getElementById("nGrowth").value=19000;document.getElementById("inGrowth").value=19000;document.getElementById("nRoll").value=16195;document.getElementById("inRoll").value=16195;document.getElementById("nOrg").value=14.74;document.getElementById("inOrg").value=14.74;document.getElementById("nBps").value=250;document.getElementById("inBps").value=250;setProg(25100)};
+document.getElementById("saveScen").onclick=function(){saved.push({g:document.getElementById("nGrowth").value,r:document.getElementById("nRoll").value,bps:document.getElementById("nBps").value,p:document.getElementById("nProg").value});try{sessionStorage.setItem("abhyaas-saved",JSON.stringify(saved))}catch(e){}document.getElementById("savedList").innerHTML="<p><b>Saved this session ("+saved.length+"):</b> "+saved.map(function(s,i){return"#"+(i+1)+" growth "+fmt(+s.g)+", roll-off "+fmt(+s.r)+", +"+s.bps+" bps, prog "+fmt(+s.p)}).join(" · ")+"</p>"};
+scenCalc();
+/* Data Explorer */
+var DS={cohorts:{cols:["Cohort","Accounts","Share %","T12 %","T3 %","Last month %"],rows:COHORTS.map(function(c){return[c.n,c.a,c.s,c.t12,c.t3,c.lm]})},budget:{cols:["Budget line","₹ lakh","Share %"],rows:BUDGET.map(function(b){return[b[0],b[1],b[2]]})},targets:{cols:["Uplift bps","Target rate %","Extra actives (fixed base)"],rows:[[200,16.74,16195],[250,17.24,20244],[300,17.74,24292]]}};
+var exPage=0,exSort=null,exDir=1;
+function exRows(){var d=DS[document.getElementById("dsSelect").value],q=(document.getElementById("exSearch").value||"").toLowerCase();var rows=d.rows.filter(function(r){return r.join(" ").toLowerCase().indexOf(q)>-1});if(exSort!==null){rows=rows.slice().sort(function(a,b){var x=a[exSort],y=b[exSort];return(typeof x==="number"?x-y:String(x).localeCompare(String(y)))*exDir})}return{d:d,rows:rows}}
+function renderEx(){var o=exRows(),per=5,pages=Math.max(1,Math.ceil(o.rows.length/per));if(exPage>=pages)exPage=pages-1;var showRates=document.getElementById("colToggle").checked;var cols=o.d.cols.map(function(c,i){return showRates||i<2?i:-1}).filter(function(i){return i>-1});
+var h="<thead><tr>"+cols.map(function(i){return"<th data-i='"+i+"' style='cursor:pointer'>"+o.d.cols[i]+" ↕</th>"}).join("")+"</tr></thead><tbody>";
+o.rows.slice(exPage*per,exPage*per+per).forEach(function(r){h+="<tr>"+cols.map(function(i){return"<td class='"+(typeof r[i]==="number"?"num":"")+"'>"+(typeof r[i]==="number"&&i!==0?fmt(r[i]):r[i])+"</td>"}).join("")+"</tr>"});h+="</tbody>";document.getElementById("exTable").innerHTML=h;document.getElementById("pgInfo").textContent="Page "+(exPage+1)+" / "+pages+" · "+o.rows.length+" rows";
+document.querySelectorAll("#exTable th").forEach(function(th){th.onclick=function(){var i=+th.dataset.i;if(exSort===i)exDir*=-1;else{exSort=i;exDir=1}renderEx()}})}
+document.getElementById("dsSelect").addEventListener("change",function(){exPage=0;renderEx()});document.getElementById("exSearch").addEventListener("input",function(){exPage=0;renderEx()});document.getElementById("colToggle").addEventListener("change",renderEx);
+document.getElementById("prevPg").onclick=function(){if(exPage>0){exPage--;renderEx()}};document.getElementById("nextPg").onclick=function(){exPage++;renderEx()};renderEx();
+function download(name,text){var a=document.createElement("a");a.href=URL.createObjectURL(new Blob([text],{type:"text/csv"}));a.download=name;a.click();setTimeout(function(){URL.revokeObjectURL(a.href)},500)}
+document.getElementById("csvBtn").onclick=function(){var o=exRows(),csv=o.d.cols.join(",")+"\n"+o.rows.map(function(r){return r.map(function(v){return'"'+String(v).replace(/"/g,'""')+'"'}).join(",")}).join("\n");download("abhyaas-explorer.csv",csv)};
+document.getElementById("repCsv").onclick=function(){download("abhyaas-summary.csv","Metric,Value\nEligible accounts,809746\nT12 active,119339\nActivation rate %,14.74\nT12 inactive,690407\nPilot budget (Rs lakh),26.0\n")};
+/* Drawer, modals, theme, chrome */
+function openDrawer(html){document.getElementById("drawerBody").innerHTML=html;document.getElementById("drawer").classList.add("open")}
+document.getElementById("drawerClose").onclick=function(){document.getElementById("drawer").classList.remove("open")};
+document.getElementById("collapseBtn").onclick=function(){document.getElementById("sidebar").classList.toggle("collapsed")};
+document.getElementById("menuBtn").onclick=function(){document.getElementById("sidebar").classList.toggle("open")};
+document.getElementById("notifBtn").onclick=function(){document.getElementById("notifModal").classList.add("open")};document.getElementById("notifClose").onclick=function(){document.getElementById("notifModal").classList.remove("open")};
+document.getElementById("profileBtn").onclick=function(){document.getElementById("profileModal").classList.add("open")};document.getElementById("profileClose").onclick=function(){document.getElementById("profileModal").classList.remove("open")};
+var cmdList=document.getElementById("cmdList");PAGES.forEach(function(p){var b=document.createElement("button");b.className="btn";b.style.display="block";b.style.width="100%";b.style.margin="4px 0";b.style.textAlign="left";b.textContent=p[1];b.onclick=function(){go(p[0]);document.getElementById("cmdModal").classList.remove("open")};cmdList.appendChild(b)});
+document.getElementById("cmdSearch").addEventListener("focus",function(){document.getElementById("cmdModal").classList.add("open")});document.getElementById("cmdClose").onclick=function(){document.getElementById("cmdModal").classList.remove("open")};
+document.addEventListener("keydown",function(e){if(e.key==="/"){e.preventDefault();document.getElementById("cmdModal").classList.add("open")}if(e.key==="Escape"){document.querySelectorAll(".modal").forEach(function(m){m.classList.remove("open")});document.getElementById("drawer").classList.remove("open")}});
+var themeMode="system";try{themeMode=localStorage.getItem("abhyaas-theme")||"system"}catch(e){}
+function applyTheme(){var dark=themeMode==="dark"||(themeMode==="system"&&window.matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.dataset.theme=dark?"dark":"light";document.getElementById("themeBtn").textContent="◐ Theme: "+themeMode[0].toUpperCase()+themeMode.slice(1);document.getElementById("themeSel").value=themeMode;try{localStorage.setItem("abhyaas-theme",themeMode)}catch(e){}}
+document.getElementById("themeBtn").onclick=function(){themeMode=themeMode==="system"?"light":themeMode==="light"?"dark":"system";applyTheme()};
+document.getElementById("themeSel").addEventListener("change",function(e){themeMode=e.target.value;applyTheme()});applyTheme();
+</script></body></html>
